@@ -37,7 +37,7 @@ class Home extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
-                height: 50,
+                height: 60,
                 width: double.infinity,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
@@ -49,12 +49,13 @@ class Home extends StatelessWidget {
             ),
             ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: blogs.length ,
+              itemCount: blogs.length,
               shrinkWrap: true,
               itemBuilder: ((context, index) {
                 return BCard(
                   title: blogs[index]['title'].toString(),
-                  image: blogs[index]['image'].toString(),);
+                  image: blogs[index]['image'].toString(),
+                );
               }),
             ),
             //BlogCard(),

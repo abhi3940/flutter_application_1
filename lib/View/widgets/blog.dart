@@ -15,6 +15,7 @@ class BCard extends StatefulWidget {
 }
 
 class _BCardState extends State<BCard> {
+ 
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -44,12 +45,12 @@ class _BCardState extends State<BCard> {
                     color: Colors.white,
                   ),
                 ),
-                const Positioned(
+                Positioned(
                   left: 20.0,
                   bottom: 8.0,
                   child: Text(
-                    'title',
-                    style: TextStyle(
+                    widget.title,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
